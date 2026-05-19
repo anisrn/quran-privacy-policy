@@ -215,10 +215,10 @@
 </header>
 
 <main>
-  <p class="last-updated">Last updated: May 17, 2026 &nbsp;·&nbsp; Package: com.qurantarteel.app</p>
+  <p class="last-updated">Last updated: June 4, 2025 &nbsp;·&nbsp; Package: com.qurantarteel.app</p>
 
   <div class="intro-card">
-    Quran - Prayer, Qibla &amp; Duas is built with your privacy in mind. We do <strong>not</strong> collect, sell, or share any personal information. All your data stays on your device.
+    Quran - Prayer, Qibla &amp; Duas is built with your privacy in mind. We do <strong>not</strong> collect, sell, or share any personal information. All your data stays on your device. The full Quran Arabic text is <strong>bundled with the app</strong> so you can read offline immediately after install — no network download needed.
   </div>
 
   <!-- 1. What we access -->
@@ -296,8 +296,14 @@
           <td>Dua &amp; Dhikr text (Arabic, transliteration, translation)</td>
         </tr>
         <tr>
-          <td><strong>spa5k Tafsir API</strong></td>
-          <td><a href="https://tafsir.app" target="_blank">api.quran.com/tafsir</a></td>
+          <td><strong>alQuran Cloud</strong></td>
+          <td><a href="https://alquran.cloud" target="_blank">api.alquran.cloud</a></td>
+          <td>Surah identifier</td>
+          <td>Full Quran Arabic text (Uthmani script) — downloaded once at build time and bundled with the app</td>
+        </tr>
+        <tr>
+          <td><strong>spa5k Tafsir API (jsDelivr CDN)</strong></td>
+          <td><a href="https://github.com/spa5k/tafsir_api" target="_blank">cdn.jsdelivr.net/gh/spa5k/tafsir_api</a></td>
           <td>Surah &amp; ayah identifiers</td>
           <td>Tafsir (Quran commentary) text</td>
         </tr>
@@ -355,11 +361,23 @@
         </tr>
         <tr>
           <td><code>@salahtime/quran-verses-*</code></td>
-          <td>Offline cache of verse text and translations per surah</td>
+          <td>Offline cache of verse text and translations per surah (for non-default Arabic script editions)</td>
+        </tr>
+        <tr>
+          <td><strong>App bundle (built-in)</strong></td>
+          <td>Full Quran Arabic text (Uthmani script, 6,236 ayahs) — embedded in the app at install time. No network request is made for this data. This is <em>not</em> user data.</td>
         </tr>
         <tr>
           <td><code>documentDirectory/quran_dl/</code></td>
-          <td>Audio MP3 files you choose to download for offline listening</td>
+          <td>Audio MP3 recitation files you choose to download for offline listening</td>
+        </tr>
+        <tr>
+          <td><code>documentDirectory/translations/</code></td>
+          <td>Translation files you optionally download (e.g., English, Bengali) for offline reading</td>
+        </tr>
+        <tr>
+          <td><code>documentDirectory/tafsirs/</code></td>
+          <td>Tafsir (Quranic commentary) files you optionally download for offline access</td>
         </tr>
       </tbody>
     </table>
